@@ -31,8 +31,10 @@ class PostIndex extends Component {
       if (post.title) {
         return(
           <li className="list-group-item" key={id}>
-            {post.title} <br/>
-            {post.content}
+            <Link to={`/posts/${post.id}`}>
+              {post.title} <br/>
+              {post.content}
+            </Link>
 
           </li>
         );
